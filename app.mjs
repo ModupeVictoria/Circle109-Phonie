@@ -6,20 +6,20 @@ function startApp() {
   // pls remove the below and make some magic in here!
 
   //collect DOM elements
-  let telInput = document.querySelector("");
-  let telDisplay = document.querySelector("");
-  let errorMsg = document.querySelector("");
-  let img = document.querySelector("");
-
+  let telInput = document.querySelector("#telInput");
+  // let telDisplay = document.querySelector("");
+  let errorMsg = document.querySelector("#telError");
+  // let img = document.querySelector("");
+  console.log("welcome home");
   //get all network providers prefixes
   const mtn_pref = [
-    0703, 0706, 0803, 0806, 0810, 0813, 0814, 0816, 0903, 0906, 0913,
+    ` 0703, 0706, 0803, 0806, 0810, 0813, 0814, 0816, 0903, 0906, 0913,`,
   ];
-  const etisalat_pref = [0809, 0817, 0818, 0908, 0909];
-  const glo_pref = [0805, 0807, 0811, 0705, 0815, 0905];
-  const airtel_pref = [0802, 0808, 0812, 0701, 0902, 0907, 0901, 0708];
-  const ntel_pref = [0804];
-  const smile_pref = [0702];
+  const etisalat_pref = [`0809, 0817, 0818, 0908, 0909`];
+  const glo_pref = [`0805, 0807, 0811, 0705, 0815, 0905`];
+  const airtel_pref = [`0802, 0808, 0812, 0701, 0902, 0907, 0901, 0708`];
+  let ntel_pref = `0804`;
+  let smile_pref = `0702`;
 
   //validations
   const validate = () => {
@@ -70,8 +70,9 @@ function startApp() {
   };
 
   telInput.addEventListener("input", () => {
+    console.log("hhiiii");
     validate();
-    checkPrefix();
+    // checkPrefix();
   });
 }
 

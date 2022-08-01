@@ -23,6 +23,26 @@ body{
   margin-top: 8px;
 }
 
+.display-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 25px auto;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    
+}
+
+img{
+    width: 70%;
+    border-radius: 5px;
+    
+}
+
 /* --- Footer
 
 footer{

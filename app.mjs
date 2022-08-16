@@ -7,9 +7,9 @@ function startApp() {
 
   //collect DOM elements
   let telInput = document.querySelector("#telInput");
-  // let telDisplay = document.querySelector("");
+  let telDisplay = document.querySelector("#network-name");
   let errorMsg = document.querySelector("#telError");
-  // let img = document.querySelector("");
+  let img = document.querySelector("#img");
   console.log("welcome home");
   //get all network providers prefixes
   const mtn_pref = [
@@ -42,27 +42,27 @@ function startApp() {
     if (mtn_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is an MTN Number";
       telDisplay.style.color = "#ffcb01";
-      img.src = "./img/MTN.svg";
+      img.src = "./images/MTN_Logo.png";
     } else if (etisalat_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is an Etisalat Number";
       telDisplay.style.color = "#016e53";
-      img.src = "./img/9mobile.svg";
+      img.src = "./images/etisalat-logo.png";
     } else if (glo_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is a Glo Number";
       telDisplay.style.color = "10a507";
-      img.src = "./img/Glo.png";
+      img.src = "./images/Glo-Logo.png";
     } else if (airtel_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is an Airtel Number";
       telDisplay.style.color = "#ed1d24";
-      img.src = "./img/Airtel.png";
+      img.src = "./images/airtel-logo.png";
     } else if (ntel_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is an Ntel Number";
       telDisplay.style.color = "#8acfb2";
-      img.src = "./img/ntel.png";
+      img.src = "./images/ntel-logo.png";
     } else if (smile_pref.includes(phoneNo)) {
       telDisplay.innerHTML = "Your Number is a Smile Number";
       telDisplay.style.color = "#8acfb2";
-      img.src = "./img/smile.png";
+      img.src = "./images/smile.png";
     } else {
       telDisplay.innerHTML = "";
       img.src = "./img/Nigeria.jpg";
@@ -72,7 +72,7 @@ function startApp() {
   telInput.addEventListener("input", () => {
     console.log("hhiiii");
     validate();
-    // checkPrefix();
+     checkPrefix();
   });
 }
 
